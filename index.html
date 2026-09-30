@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, My Love ❤️</title>
+
+<style>
+
+/* ================= POLAROID MEMORIES ================= */
+
+.memories {
+    text-align: center;
+    overflow: hidden;
+}
+
+.memory-intro {
+    max-width: 650px;
+    margin: -25px auto 60px;
+    color: #ffd8e9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.polaroid-wall {
+    position: relative;
+    min-height: 650px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.polaroid {
+    position: absolute;
+    width: 230px;
+    padding: 12px 12px 45px;
+    background: #fff;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.45),
+        0 0 30px rgba(255,105,180,.15);
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+    cursor: pointer;
+    animation: polaroidAppear 1.2s ease backwards;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    color: #333;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 15px;
+    text-align: center;
+}
+
+.p1 {
+    left: 5%;
+    top: 80px;
+    transform: rotate(-12deg);
+    animation-delay: .2s;
+}
+
+.p2 {
+    left: 27%;
+    top: 20px;
+    transform: rotate(7deg);
+    animation-delay: .5s;
+}
+
+.p3 {
+    right: 27%;
+    top: 70px;
+    transform: rotate(-5deg);
+    animation-delay: .8s;
+}
+
+.p4 {
+    right: 5%;
+    top: 30px;
+    transform: rotate(12deg);
+    animation-delay: 1.1s;
+}
+
+.p5 {
+    left: 38%;
+    top: 310px;
+    transform: rotate(-3deg);
+    animation-delay: 1.4s;
+}
+
+.polaroid:hover {
+    transform:
+        rotate(0deg)
+        scale(1.15)
+        translateY(-15px);
+    z-index: 20;
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.65),
+        0 0 50px rgba(255,20,147,.45);
+}
+
+@keyframes polaroidAppear {
+    0% {
+        opacity: 0;
+        transform:
+            translateY(100px)
+            rotate(0deg)
+            scale(.5);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.polaroid-wall::before {
+    content: "❤️  💕  ✨  💗  🌹  💖";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    font-size: 25px;
+    letter-spacing: 25px;
+    animation: floatingLove 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes floatingLove {
+    0%,100% {
+        transform: translateY(0);
+        opacity: .6;
+    }
+
+    50% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+}
+
+@media(max-width: 700px) {
+
+    .polaroid-wall {
+        min-height: 1050px;
+    }
+
+    .polaroid {
+        width: 190px;
+        padding: 10px 10px 40px;
+    }
+
+    .polaroid img {
+        height: 210px;
+    }
+
+    .p1 {
+        left: 3%;
+        top: 30px;
+    }
+
+    .p2 {
+        right: 3%;
+        left: auto;
+        top: 170px;
+    }
+
+    .p3 {
+        left: 5%;
+        right: auto;
+        top: 390px;
+    }
+
+    .p4 {
+        right: 3%;
+        top: 530px;
+    }
+
+    .p5 {
+        left: 50%;
+        top: 750px;
+        transform: translateX(-50%) rotate(-4deg);
+    }
+
+    .polaroid:hover {
+        transform:
+            scale(1.08)
+            translateY(-10px);
+    }
+}
+
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #08000f;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* ================= BACKGROUND ================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+    background:
+        radial-gradient(circle at 20% 20%, #ff1493 0%, transparent 25%),
+        radial-gradient(circle at 80% 30%, #9b00ff 0%, transparent 25%),
+        radial-gradient(circle at 50% 80%, #ff0055 0%, transparent 25%),
+        #08000f;
+}
+
+
+/* ================= STARS ================= */
+
+.star {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+    z-index: -3;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: .2;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ff9dcc;
+    margin-bottom: 20px;
+    animation: fadeDown 1.5s ease;
+}
+
+h1 {
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: .9;
+    background: linear-gradient(
+        90deg,
+        #fff,
+        #ff75b8,
+        #ff1493,
+        #fff
+    );
+    background-size: 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientMove 4s infinite alternate;
+}
+
+@keyframes gradientMove {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 100%;
+    }
+}
+
+.hero-subtitle {
+    margin-top: 25px;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: #ffd9ec;
+    line-height: 1.7;
+}
+
+.love-button {
+    margin-top: 35px;
+    border: none;
+    padding: 18px 35px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff006e, #ff4da6);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(255, 0, 110, .6);
+    transition: .3s;
+}
+
+.love-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(255, 0, 110, .9);
+}
+
+
+/* ================= HEARTS ================= */
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: floatHeart linear forwards;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #ff4da6;
+}
+
+
+/* ================= LETTER ================= */
+
+.letter-container {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    backdrop-filter: blur(15px);
+    padding: clamp(25px, 5vw, 60px);
+    border-radius: 30px;
+    box-shadow: 0 20px 80px rgba(0,0,0,.4);
+}
+
+.letter {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: #ffe8f3;
+}
+
+.signature {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 1.5rem;
+    color: #ff79b8;
+}
+
+
+/* ================= MISS CARDS ================= */
+
+.miss-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.miss-card {
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(255,255,255,.07);
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,.12);
+    transition: .4s;
+}
+
+.miss-card:hover {
+    transform: translateY(-15px) rotate(1deg);
+    background: rgba(255, 20, 147, .15);
+    box-shadow: 0 20px 50px rgba(255,0,110,.2);
+}
+
+.miss-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.miss-card h3 {
+    margin-bottom: 15px;
+    color: #ff79b8;
+}
+
+
+/* ================= CAKE ================= */
+
+.cake-section {
+    text-align: center;
+}
+
+.cake {
+    position: relative;
+    width: 220px;
+    height: 180px;
+    margin: 80px auto 30px;
+}
+
+.cake-body {
+    position: absolute;
+    bottom: 0;
+    width: 220px;
+    height: 110px;
+    background: linear-gradient(#ff6ba9, #d41468);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(255,0,100,.4);
+}
+
+.cake-body::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    opacity: .8;
+}
+
+.candle {
+    position: absolute;
+    width: 15px;
+    height: 60px;
+    background: white;
+    top: 10px;
+    left: 103px;
+    border-radius: 5px;
+}
+
+.flame {
+    position: absolute;
+    width: 22px;
+    height: 30px;
+    background: #ffd700;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    top: -30px;
+    left: -4px;
+    animation: flame 0.5s infinite alternate;
+}
+
+@keyframes flame {
+    to {
+        transform: rotate(-45deg) scale(1.2);
+        opacity: .7;
+    }
+}
+
+.cake-note {
+    color: #ffc5df;
+    font-size: 1.1rem;
+}
+
+
+/* ================= SURPRISE ================= */
+
+.surprise-box {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.gift {
+    font-size: 6rem;
+    cursor: pointer;
+    display: inline-block;
+    animation: giftBounce 1.5s infinite;
+}
+
+@keyframes giftBounce {
+    0%,100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+.hidden-message {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s ease;
+}
+
+.hidden-message.show {
+    max-height: 500px;
+    margin-top: 30px;
+}
+
+.hidden-message p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #ffd4e8;
+}
+
+
+/* ================= DISTANCE ================= */
+
+.distance {
+    text-align: center;
+}
+
+.distance-box {
+    padding: 40px;
+    border-radius: 30px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,0,110,.2),
+        rgba(120,0,255,.2)
+    );
+}
+
+.distance-number {
+    font-size: clamp(3rem, 12vw, 7rem);
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.distance-text {
+    font-size: 1.3rem;
+    color: #ffd7e8;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: #ffafd2;
+}
+
+.footer-heart {
+    font-size: 3rem;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+
+/* ================= MOBILE CHROME PERFORMANCE ================= */
+
+/* Keep scrolling smooth on mobile Chrome by avoiding large fixed layers
+   and unstable viewport-height calculations while preserving the design. */
+html, body {
+    overscroll-behavior-x: none;
+}
+
+@media(max-width: 700px) {
+
+    .background {
+        position: absolute;
+        min-height: 100%;
+        height: 100%;
+        will-change: auto;
+    }
+
+    .star {
+        position: absolute;
+        will-change: opacity, transform;
+        contain: layout style paint;
+    }
+
+    .heart {
+        position: absolute;
+        will-change: transform, opacity;
+        contain: layout style paint;
+    }
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .music-button {
+        position: fixed;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    #loveFinale {
+        height: 100svh;
+        min-height: 100svh;
+        contain: paint;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    /* Keep the existing mobile layout exactly as intended. */
+    .miss-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 70px 18px;
+    }
+
+    .letter {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .cake {
+        transform: scale(.8);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 700px) {
+
+    .miss-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 70px 18px;
+    }
+
+    .letter {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .cake {
+        transform: scale(.8);
+    }
+}
+
+
+/* ================= FADE ANIMATION ================= */
+
+.fade {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================= MUSIC ================= */
+
+.music-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: #ff1493;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0 0 25px rgba(255,20,147,.6);
+}
+
+
+/* =====================================================
+   FULL SCREEN LOVE FINALE
+===================================================== */
+
+#loveFinale {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ff2d88 0%,
+            #b00068 30%,
+            #42002f 65%,
+            #08000f 100%
+        );
+
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    overflow: hidden;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+#loveFinale.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* ================= GLOW ================= */
+
+.loveGlow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: #ff1493;
+
+    filter: blur(130px);
+    opacity: .45;
+
+    animation:
+        glowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+
+    from {
+        transform: scale(.7);
+        opacity: .25;
+    }
+
+    to {
+        transform: scale(1.5);
+        opacity: .6;
+    }
+
+}
+
+
+/* ================= FINAL CONTENT ================= */
+
+.finalLoveContent {
+    position: relative;
+    z-index: 10;
+
+    text-align: center;
+    padding: 20px;
+
+    animation:
+        finalEntrance 1.5s
+        cubic-bezier(.17,.67,.3,1.3);
+}
+
+@keyframes finalEntrance {
+
+    0% {
+        opacity: 0;
+        transform:
+            scale(.2)
+            translateY(100px);
+    }
+
+    60% {
+        transform:
+            scale(1.15)
+            translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+}
+
+
+/* ================= GIANT HEART ================= */
+
+.finalHeart {
+    font-size:
+        clamp(6rem, 22vw, 14rem);
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 0 25px #ff1493
+        )
+        drop-shadow(
+            0 0 60px #ff1493
+        );
+
+    animation:
+        giantHeartBeat 1.2s infinite;
+}
+
+@keyframes giantHeartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.12);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= I LOVE YOU ================= */
+
+.finalLoveText {
+    margin: 15px 0;
+
+    font-size:
+        clamp(3rem, 10vw, 9rem);
+
+    font-weight: 900;
+
+    letter-spacing:
+        clamp(2px, 1vw, 12px);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ffd2e7,
+            #ff55a8,
+            #ffffff,
+            #ffd2e7
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        textShimmer 4s
+        linear infinite;
+}
+
+@keyframes textShimmer {
+
+    0% {
+        background-position: 0%;
+
+        filter:
+            drop-shadow(
+                0 0 10px #ff1493
+            );
+    }
+
+    50% {
+        background-position: 100%;
+
+        filter:
+            drop-shadow(
+                0 0 40px #ff69b4
+            );
+    }
+
+    100% {
+        background-position: 0%;
+
+        filter:
+            drop-shadow(
+                0 0 10px #ff1493
+            );
+    }
+
+}
+
+
+/* ================= FINAL MESSAGE ================= */
+
+.finalLoveMessage {
+    max-width: 650px;
+    margin: 15px auto;
+
+    color: #ffe4f0;
+
+    font-size:
+        clamp(1rem, 3vw, 1.5rem);
+
+    line-height: 1.7;
+}
+
+.finalLoveSmall {
+    color: #ffb6d5;
+    font-size: 1.1rem;
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+#finalHearts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.finalFloatingHeart {
+    position: absolute;
+    bottom: -60px;
+
+    animation:
+        finalHeartFloat
+        linear forwards;
+}
+
+@keyframes finalHeartFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.5);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.2);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* ================= READ AGAIN BUTTON ================= */
+
+.finalBackButton {
+    margin-top: 30px;
+
+    padding: 15px 28px;
+
+    border: 1px solid
+        rgba(255,255,255,.4);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,.12);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.finalBackButton:hover {
+
+    transform: scale(1.08);
+
+    background:
+        rgba(255,255,255,.25);
+
+    box-shadow:
+        0 0 30px
+        rgba(255,105,180,.6);
+}
+
+
+/* ================= MOBILE FINALE ================= */
+
+@media(max-width:600px) {
+
+    .loveGlow {
+        width: 300px;
+        height: 300px;
+    }
+
+    .finalLoveText {
+        letter-spacing: 2px;
+    }
+
+    .finalLoveMessage {
+        padding: 0 20px;
+    }
+
+}
+
+
+/* ================= REDUCE MOTION ================= */
+
+@media(prefers-reduced-motion: reduce) {
+
+    #loveFinale *,
+    #loveFinale {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="background"></div>
+
+
+<!-- ================= STARS ================= -->
+
+<div id="stars"></div>
+
+
+<!-- ================= MUSIC ================= -->
+
+<button class="music-button" onclick="toggleMusic()">🎵</button>
+
+<audio id="music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ================= HERO ================= -->
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            To The Girl Who Has My Heart ❤️
+        </div>
+
+        <h1>
+            Happy Birthday<br>
+            My Love
+        </h1>
+
+        <p class="hero-subtitle">
+            Even though we're miles apart,
+            my heart is right there with you. 💕
+        </p>
+
+        <button class="love-button" onclick="celebrate()">
+            🎉 Tap For Your Surprise 🎉
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LETTER ================= -->
+
+<section id="loveLetter" class="fade">
+
+    <h2 class="section-title">
+        A Letter From <span>My Heart 💌</span>
+    </h2>
+
+    <div class="letter-container">
+
+        <div class="letter">
+
+            My beautiful Laudia,
+
+            <br><br>
+
+            Happy Birthday to the most special girl in my life. ❤️
+
+            <br><br>
+
+            I wish I could be beside you right now.
+            I wish I could see your smile, hold your hand,
+            look into your eyes and tell you in person just
+            how much you mean to me.
+
+            <br><br>
+
+            Being far away from you isn't easy.
+            There are so many moments when I wish I could
+            simply close the distance between us and be there
+            with you.
+
+            <br><br>
+
+            I miss your smile.
+            I miss your voice.
+            I miss your presence.
+            I miss all the little things that make you,
+            <strong>you.</strong>
+
+            <br><br>
+
+            But even though we're separated by distance,
+            nothing can make my feelings for you feel far away.
+
+            <br><br>
+
+            So today, I hope you remember something:
+
+            <br><br>
+
+            <strong>
+                You are loved.
+                You are appreciated.
+                You are precious to me.
+                And you will always have a special place
+                in my heart. ❤️
+            </strong>
+
+            <br><br>
+
+            I can't wait for the day when birthdays don't have
+            to be celebrated through a screen anymore.
+
+            <br><br>
+
+            Until then...
+
+            <br><br>
+
+            I'll keep loving you from wherever I am.
+
+            <div class="signature">
+                Forever yours,<br>
+                ❤️ Emmy
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= THINGS I MISS ================= -->
+
+<section class="fade">
+
+    <h2 class="section-title">
+        Things I <span>Miss About You 💕</span>
+    </h2>
+
+    <div class="miss-grid">
+
+        <div class="miss-card">
+
+            <div class="miss-icon">😊</div>
+
+            <h3>Your Smile</h3>
+
+            <p>
+                I swear your smile can make even the
+                hardest day feel better.
+            </p>
+
+        </div>
+
+
+        <div class="miss-card">
+
+            <div class="miss-icon">🎶</div>
+
+            <h3>Your Voice</h3>
+
+            <p>
+                Sometimes I just wish I could hear your
+                voice beside me instead of through a phone.
+            </p>
+
+        </div>
+
+
+        <div class="miss-card">
+
+            <div class="miss-icon">🤗</div>
+
+            <h3>Your Hugs</h3>
+
+            <p>
+                The one thing I would give anything for
+                right now is one of your hugs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= POLAROID MEMORIES ================= -->
+
+<section class="memories fade">
+
+    <h2 class="section-title">
+        My Favorite <span>Memories Of You 📸❤️</span>
+    </h2>
+
+    <p class="memory-intro">
+        Every picture reminds me of how lucky I am to have you.
+        Even from far away, these little moments make you feel close to me. 💕
+    </p>
+
+    <div class="polaroid-wall">
+
+        <div class="polaroid p1">
+
+            <img src="photo1.jpg" alt="My beautiful girl">
+
+            <div class="caption">
+                My beautiful girl ❤️
+            </div>
+
+        </div>
+
+
+        <div class="polaroid p2">
+
+            <img src="photo2.jpg" alt="Beautiful memory">
+
+            <div class="caption">
+                One of my favorite smiles 🥰
+            </div>
+
+        </div>
+
+
+        <div class="polaroid p3">
+
+            <img src="photo3.jpg" alt="Special memory">
+
+            <div class="caption">
+                Wish I was there with you 💕
+            </div>
+
+        </div>
+
+
+        <div class="polaroid p4">
+
+            <img src="photo4.jpg" alt="Sweet memory">
+
+            <div class="caption">
+                Forever my favorite person 🌹
+            </div>
+
+        </div>
+
+
+        <div class="polaroid p5">
+
+            <img src="photo5.jpg" alt="Favorite photo">
+
+            <div class="caption">
+                I miss you so much ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CAKE ================= -->
+
+<section class="cake-section fade">
+
+    <h2 class="section-title">
+        Make A <span>Birthday Wish 🎂</span>
+    </h2>
+
+    <div class="cake">
+
+        <div class="candle">
+
+            <div class="flame"></div>
+
+        </div>
+
+        <div class="cake-body"></div>
+
+    </div>
+
+    <p class="cake-note">
+
+        Close your eyes, make a wish,
+        and remember that somewhere out there,
+        someone is wishing for you too. ❤️
+
+    </p>
+
+</section>
+
+
+<!-- ================= DISTANCE ================= -->
+
+<section class="distance fade">
+
+    <h2 class="section-title">
+
+        Miles Apart,
+        <span>Hearts Together ❤️</span>
+
+    </h2>
+
+    <div class="distance-box">
+
+        <div class="distance-number">
+            ∞
+        </div>
+
+        <div class="distance-text">
+
+            No amount of distance can measure
+            how much I love you.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SURPRISE ================= -->
+
+<section class="surprise-box fade">
+
+    <h2 class="section-title">
+
+        I Have
+        <span>One More Thing 🎁</span>
+
+    </h2>
+
+    <div class="gift" onclick="openGift()">
+        🎁
+    </div>
+
+    <p>
+        Tap the gift ❤️
+    </p>
+
+    <div id="hiddenMessage" class="hidden-message">
+
+        <p>
+
+            If I could give you anything today,
+            I wouldn't give you diamonds,
+            flowers or expensive gifts.
+
+            <br><br>
+
+            I'd give you the distance disappearing
+            between us.
+
+            <br><br>
+
+            Because the only birthday gift I really want
+            is the chance to be beside you,
+            hold you close and say...
+
+            <br><br>
+
+            <strong>
+
+                "Happy Birthday, my love.
+                I missed you so much." ❤️
+
+            </strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-heart">
+        ❤️
+    </div>
+
+    <p>
+        Made with love, just for you.
+    </p>
+
+    <p>
+        Happy Birthday, beautiful. 🎂💕
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     MAIN JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* ================= STARS ================= */
+
+const stars =
+    document.getElementById("stars");
+
+for(let i = 0; i < 80; i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className = "star";
+
+    star.style.left =
+        Math.random() * 100 + "%";
+
+    star.style.top =
+        Math.random() * 100 + "%";
+
+    star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+    stars.appendChild(star);
+}
+
+
+/* ================= FLOATING HEARTS ================= */
+
+const heartSymbols = [
+    "❤️",
+    "💕",
+    "💖",
+    "💗",
+    "💓",
+    "💘",
+    "💝",
+    "🌹",
+    "💋"
+];
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        heartSymbols[
+            Math.floor(
+                Math.random() *
+                heartSymbols.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        15 + Math.random() * 30 + "px";
+
+    heart.style.animationDuration =
+        5 + Math.random() * 6 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 12000);
+}
+
+setInterval(createHeart, 600);
+
+
+/* ================= CONFETTI ================= */
+
+function celebrate(){
+
+    /* Hearts explosion */
+
+    for(let i = 0; i < 40; i++){
+
+        const heart =
+            document.createElement("div");
+
+        heart.innerHTML = "❤️";
+
+        heart.style.position = "fixed";
+        heart.style.left = "50%";
+        heart.style.top = "50%";
+        heart.style.fontSize = "25px";
+        heart.style.zIndex = "100";
+        heart.style.pointerEvents = "none";
+
+        const angle =
+            Math.random() * Math.PI * 2;
+
+        const distance =
+            150 + Math.random() * 350;
+
+        const x =
+            Math.cos(angle) * distance;
+
+        const y =
+            Math.sin(angle) * distance;
+
+        heart.animate(
+            [
+                {
+                    transform:
+                        "translate(-50%,-50%) scale(0)",
+                    opacity: 1
+                },
+
+                {
+                    transform:
+                        `translate(
+                            calc(-50% + ${x}px),
+                            calc(-50% + ${y}px)
+                        )
+                        scale(1.5)`,
+
+                    opacity: 0
+                }
+            ],
+            {
+                duration: 1500,
+                easing:
+                    "cubic-bezier(.2,.8,.3,1)"
+            }
+        );
+
+        document.body.appendChild(heart);
+
+        setTimeout(
+            () => heart.remove(),
+            1600
+        );
+    }
+
+
+    /* Confetti */
+
+    for(let i = 0; i < 120; i++){
+
+        const confetti =
+            document.createElement("div");
+
+        confetti.style.position = "fixed";
+        confetti.style.left = "50%";
+        confetti.style.top = "50%";
+        confetti.style.width = "8px";
+        confetti.style.height = "14px";
+
+        confetti.style.background =
+            `hsl(${Math.random()*360},100%,70%)`;
+
+        confetti.style.zIndex = "99";
+        confetti.style.pointerEvents = "none";
+
+        const angle =
+            Math.random() * Math.PI * 2;
+
+        const distance =
+            100 + Math.random() * 500;
+
+        const x =
+            Math.cos(angle) * distance;
+
+        const y =
+            Math.sin(angle) * distance;
+
+        confetti.animate(
+            [
+                {
+                    transform:
+                        "translate(-50%,-50%) rotate(0)",
+                    opacity: 1
+                },
+
+                {
+                    transform:
+                        `translate(
+                            calc(-50% + ${x}px),
+                            calc(-50% + ${y}px)
+                        )
+                        rotate(${Math.random()*720}deg)`,
+
+                    opacity: 0
+                }
+            ],
+            {
+                duration:
+                    1800 + Math.random()*1200,
+
+                easing: "ease-out"
+            }
+        );
+
+        document.body.appendChild(confetti);
+
+        setTimeout(
+            () => confetti.remove(),
+            3200
+        );
+    }
+
+}
+
+
+/* ================= GIFT ================= */
+
+function openGift(){
+
+    const message =
+        document.getElementById(
+            "hiddenMessage"
+        );
+
+    message.classList.toggle("show");
+
+    celebrate();
+}
+
+
+/* ================= MUSIC ================= */
+
+let playing = false;
+
+/* ================= AUTOMATIC MUSIC ================= */
+
+const music = document.getElementById("music");
+
+/*
+   Try to start the music automatically when the page opens.
+   Browsers may block unmuted autoplay until the visitor
+   interacts with the page. If that happens, the first
+   click/touch/key press will start the music automatically.
+*/
+
+function startMusicAutomatically(){
+
+    if(!music) return;
+
+    music.play()
+        .then(() => {
+            playing = true;
+        })
+        .catch(() => {
+            playing = false;
+        });
+
+}
+
+/* Try immediately when the page loads */
+window.addEventListener("load", startMusicAutomatically);
+
+/*
+   If the browser blocks autoplay, start the music on the
+   visitor's first interaction with the page.
+*/
+function startMusicAfterInteraction(){
+
+    if(!music || playing) return;
+
+    music.play()
+        .then(() => {
+            playing = true;
+        })
+        .catch(() => {
+            playing = false;
+        });
+
+}
+
+document.addEventListener(
+    "click",
+    startMusicAfterInteraction,
+    { once: true }
+);
+
+document.addEventListener(
+    "touchstart",
+    startMusicAfterInteraction,
+    { once: true }
+);
+
+document.addEventListener(
+    "keydown",
+    startMusicAfterInteraction,
+    { once: true }
+);
+
+
+function toggleMusic(){
+
+    if(!music) return;
+
+    if(!playing){
+
+        music.play()
+            .then(() => {
+                playing = true;
+            })
+            .catch(() => {
+
+                alert(
+                    "Add your music file as 'music.mp3' " +
+                    "in the same folder as this website."
+                );
+
+            });
+
+    } else {
+
+        music.pause();
+
+        playing = false;
+
+    }
+
+}
+
+
+/* ================= SCROLL ANIMATION ================= */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .15
+        }
+    );
+
+document.querySelectorAll(".fade")
+    .forEach(element =>
+        observer.observe(element)
+    );
+
+
+/* ================= RANDOM HEART BURSTS ================= */
+
+setInterval(() => {
+
+    if(Math.random() > .5){
+
+        for(let i = 0; i < 5; i++){
+
+            setTimeout(
+                createHeart,
+                i * 200
+            );
+
+        }
+
+    }
+
+}, 4000);
+
+</script>
+
+
+<!-- =====================================================
+     FINAL I LOVE YOU FINALE
+===================================================== -->
+
+<div id="loveFinale">
+
+    <!-- Glowing background -->
+    <div class="loveGlow"></div>
+
+    <!-- Floating hearts -->
+    <div id="finalHearts"></div>
+
+    <!-- Main message -->
+    <div class="finalLoveContent">
+
+        <div class="finalHeart">
+            ❤️
+        </div>
+
+        <h1 class="finalLoveText">
+            I LOVE YOU
+        </h1>
+
+        <p class="finalLoveMessage">
+            No matter how many miles are between us,
+            my heart will always find its way to you. ❤️
+        </p>
+
+        <p class="finalLoveSmall">
+            Happy Birthday, my beautiful love. 💕
+        </p>
+
+        <button
+            class="finalBackButton"
+            onclick="goBackToLetter()">
+
+            💕 Read My Letter Again
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     FINAL LOVE FINALE JAVASCRIPT
+===================================================== -->
+
+<script>
+
+let finaleAlreadyShown = false;
+
+
+/* ================= SHOW FINALE ================= */
+
+function showLoveFinale(){
+
+    const finale =
+        document.getElementById(
+            "loveFinale"
+        );
+
+    finale.classList.add("show");
+
+    createFinalHearts();
+
+}
+
+
+/* ================= READ LETTER AGAIN ================= */
+
+function goBackToLetter(){
+
+    const finale =
+        document.getElementById(
+            "loveFinale"
+        );
+
+    finale.classList.remove("show");
+
+    /*
+       IMPORTANT:
+       We do NOT reset finaleAlreadyShown.
+
+       This means once the final animation has appeared,
+       clicking "Read My Letter Again" will return to the
+       letter without allowing the finale to appear again
+       during the same visit to the page.
+    */
+
+    setTimeout(function(){
+
+        const letter =
+            document.getElementById(
+                "loveLetter"
+            );
+
+        if(letter){
+
+            letter.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    }, 500);
+
+}
+
+
+/* ================= FINAL FLOATING HEARTS ================= */
+
+function createFinalHearts(){
+
+    const container =
+        document.getElementById(
+            "finalHearts"
+        );
+
+    container.innerHTML = "";
+
+    const symbols = [
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💓",
+        "💘",
+        "💝",
+        "🌹",
+        "✨"
+    ];
+
+    for(let i = 0; i < 80; i++){
+
+        const heart =
+            document.createElement("span");
+
+        heart.className =
+            "finalFloatingHeart";
+
+        heart.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+        heart.style.left =
+            Math.random() * 100 + "%";
+
+        heart.style.fontSize =
+            15 + Math.random() * 30 + "px";
+
+        heart.style.animationDuration =
+            4 + Math.random() * 6 + "s";
+
+        heart.style.animationDelay =
+            Math.random() * 5 + "s";
+
+        container.appendChild(heart);
+
+    }
+
+}
+
+
+/* =====================================================
+   DETECT WHEN SHE REACHES THE END
+===================================================== */
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        const scrollPosition =
+            window.innerHeight +
+            window.scrollY;
+
+        const pageHeight =
+            document.documentElement
+                .scrollHeight;
+
+
+        if(
+            scrollPosition >=
+                pageHeight - 100 &&
+            !finaleAlreadyShown
+        ){
+
+            finaleAlreadyShown = true;
+
+
+            /*
+               30 SECOND DELAY
+               BEFORE THE FINAL
+               I LOVE YOU ANIMATION
+               APPEARS.
+            */
+
+            setTimeout(function(){
+
+                showLoveFinale();
+
+            }, 30000);
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
